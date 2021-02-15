@@ -1,50 +1,42 @@
 <html>
-<head>
-<title>
-Code Runner
-</title>
+	<head>
+		<title>Code Runner</title>
 
-<link rel="stylesheet" href="index.css">
-<script src="jquery-3.5.1.min.js"></script>
-</head>
+		<link rel="stylesheet" href="index.css" />
+		<script src="jquery-3.5.1.min.js"></script>
+	</head>
 
-<body>
+	<body>
+		<div id="header">
+			<div id="logo">Code Runner</div>
 
+			<div id="buttonContainer">
+				<div class="toggleButton active" id="html">HTML</div>
 
-<div id="header">
+				<div class="toggleButton" id="css">CSS</div>
 
-<div id="logo">
+				<div class="toggleButton" id="javascript">JavaScript</div>
 
-Code Runner
+				<div class="toggleButton active" id="output">Output</div>
+			</div>
+		</div>
 
-</div>
+		<div id="bodyContainer">
+			<textarea id="htmlPanel" class="panel">
+<p id="paragraph">Welcome Code Runner!</p></textarea
+			>
 
-<div id="buttonContainer">
+			<textarea id="cssPanel" class="panel hidden">
+p { color: white; }</textarea
+			>
 
-<div class="toggleButton active" id="html">HTML</div>
+			<textarea id="javascriptPanel" class="panel hidden">
+document.getElementById("paragraph").innerHTML = "Running Code!";</textarea
+			>
 
-<div class="toggleButton" id="css">CSS</div>
+			<iframe id="outputPanel" class="panel"></iframe>
+		</div>
 
-<div class="toggleButton" id="javascript">JavaScript</div>
-
-<div class="toggleButton active" id="output">Output</div>
-
-</div>
-
-</div>
-
-<div id="bodyContainer">
-
-<textarea id="htmlPanel" class="panel"><p id="paragraph">Hello Code Runner!</p></textarea>
-
-<textarea id="cssPanel" class="panel hidden">p { color: white; }</textarea>
-
-<textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Running Code!";</textarea>
-
-<iframe id="outputPanel" class="panel"></iframe>
-
-</div>
-
-<script type="text/javascript" src="index.js"></script>
-</body>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
 </html>
